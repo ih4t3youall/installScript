@@ -4,7 +4,7 @@ touch ~/.scripts/work
 mkdir ~/temp
 cd ~/temp
 git clone https://github.com/ih4t3youall/open
-cp -r open ~/.scripts/open
+cp -r open ~/.scripts
 #install and configure vim
 git clone https://github.com/ih4t3youall/vimconfig
 cd vimconfig
