@@ -9,7 +9,7 @@ cp -r open ~/.scripts
 git clone https://github.com/ih4t3youall/vimconfig
 cd vimconfig
 rm ~/.vimrc
-cp vimrc ~/vimrc
+cp vimrc ~/.vimrc
 
 #install pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
