@@ -1,14 +1,14 @@
-echo "answer 'y' or 'n', if you don't do this this will fail"
-echo "wich browser do you want to use?"
-echo "1 opera"
-echo "2 firefox"
-echo "3 chrome"
-read browser
-echo "you will need vlc for this to work"
-echo "do you want to install vlc?"
-read vlc
-echo "do you want to install screen?"
-read screen
+#echo "answer 'y' or 'n', if you don't do this this will fail"
+#echo "wich browser do you want to use?"
+#echo "1 opera"
+#echo "2 firefox"
+#echo "3 chrome"
+#read browser
+#echo "you will need vlc for this to work"
+#echo "do you want to install vlc?"
+#read vlc
+#echo "do you want to install screen?"
+#read screen
 
 mkdir ~/.scripts
 touch ~/.scripts/notes
@@ -54,23 +54,23 @@ echo 'alias open=". ~/.scripts/open/open.sh"' >> ~/.bashrc
 echo 'alias slideshow="java -jar ~/.scripts/slideshow/target/randomSlideshow-0.0.1-SNAPSHOT.jar"' >> ~/.bashrc
 
 rm -rf ~/temp
-
-if [ $browser = 1 ];then
-  sudo apt-get install opera
-fi
-
-if [ $browser = 2 ];then
-  sudo apt-get install firefox
-fi
-
-if [ $browser = 3 ];then
-  sudo apt-get install chrome
-fi
-
-if [ $vlc = 'y' ];then 
-  sudo apt-get install vlc
-fi
-
-if [ $screen = 'y' ];then
-  sudo apt-get install screen
-fi
+#
+#if [ $browser = 1 ];then
+#  sudo apt-get install opera
+#fi
+#
+#if [ $browser = 2 ];then
+#  sudo apt-get install firefox
+#fi
+#
+#if [ $browser = 3 ];then
+#  sudo apt-get install chrome
+#fi
+#
+#if [ $vlc = 'y' ];then 
+#  sudo apt-get install vlc
+#fi
+#
+#if [ $screen = 'y' ];then
+#  sudo apt-get install screen
+#fi
