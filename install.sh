@@ -1,3 +1,13 @@
+if [ 'root' == $(whoami) ]; then
+	apt install vim -y
+	apt install curl -y
+else
+	sudo apt-get install vim -y
+	sudo apt-get install curl -y
+fi
+
+sudo apt-get install vim -y
+sudo apt-get install curl -y
 mkdir ~/.scripts
 touch ~/.scripts/notes
 touch ~/.scripts/work
