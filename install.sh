@@ -20,6 +20,7 @@ git clone https://github.com/ih4t3youall/vimconfig
 cd vimconfig
 rm ~/.vimrc
 cp vimrc ~/.vimrc
+cp ideavimrc ~/.ideavimrc
 
 #install pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
