@@ -67,4 +67,5 @@ echo 'alias slideshow="java -jar ~/.scripts/slideshow/target/randomSlideshow-0.0
 echo "installing vim-mode-plus for atom"
 apm install vim-mode-plus
 echo "removing temp folder"
+. ~/.bashrc
 rm -rf ~/temp
