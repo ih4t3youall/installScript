@@ -11,7 +11,7 @@ fi
 echo "create scripts folder"
 mkdir ~/.scripts
 echo "creating notes"
-touch ~/.scripts/notes
+cp notes ~/.scripts/notes
 echo "creating work"
 touch ~/.scripts/work
 echo "creating temp folder"
