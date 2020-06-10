@@ -126,9 +126,3 @@ know ip: docker inspect containerID | grep IPA
 
 }
 
-replicon {
-  
-  martin.lequerica@tradehelm.com
-  Lanc1aD3lta!
-  
-  }
