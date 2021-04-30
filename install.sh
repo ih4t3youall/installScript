@@ -35,6 +35,20 @@ echo "installing pathongen"
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
+#create workdir directory
+mkdir ~/Documents/workdir
+
+#java apps instalation
+cd
+mkdir ~/.scripts/javaApps
+cd ~/Documents/workdir
+git clone https://github.com/ih4t3youall/scripter
+cd scripter
+mvn clean install
+cd target
+cp scripter-1.0-SNAPSHOT.jar ~/.scripter/javaApps
+cd
+
 
 #install bundles
 echo "installing bundles"
@@ -43,6 +57,7 @@ git clone https://github.com/preservim/nerdtree.git
 git clone https://github.com/leafgarland/typescript-vim.git
 git clone git://github.com/burnettk/vim-angular.git 
 git clone https://github.com/artur-shaik/vim-javacomplete2.git 
+cd
 
 #aliases
 echo "creating aliases"
