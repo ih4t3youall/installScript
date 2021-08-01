@@ -6,6 +6,7 @@ else
 	sudo apt-get install vim -y
 	sudo apt-get install curl -y
 	sudo apt-get install atom -y
+	sudo apt-get install xclip -y
 fi
 
 echo "create scripts folder"
@@ -14,6 +15,8 @@ echo "creating notes"
 cp notes ~/.scripts/notes
 echo "creating work"
 touch ~/.scripts/work
+echo "creating helpers folder"
+mkdir ~/.scripts/helpers
 echo "creating temp folder"
 mkdir ~/temp
 cd ~/temp
@@ -30,18 +33,24 @@ rm ~/.vimrc
 cp vimrc ~/.vimrc
 cp ideavimrc ~/.ideavimrc
 
+echo "installing draftMessage"
+cd
+cd .scripts/helpers
+touch draftMessage.txt
+
+
 #install pathogen
 echo "installing pathongen"
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 #create workdir directory
-mkdir ~/Documents/workdir
+mkdir ~/Documents/workspace
 
 #java apps instalation
 cd
 mkdir ~/.scripts/javaApps
-cd ~/Documents/workdir
+cd ~/Documents/workspace
 git clone https://github.com/ih4t3youall/scripter
 cd scripter
 mvn clean install
@@ -73,6 +82,8 @@ echo 'alias work="vim ~/.scripts/work"' >> ~/.bashrc
 echo 'alias catwork="cat ~/.scripts/work"' >> ~/.bashrc
 echo 'alias vimrc="vim ~/.vimrc"' >> ~/.bashrc
 echo 'alias mkill="xkill;exit"' >> ~/.bashrc
+echo 'alias draftMessage="vim ~/.scripts/helpers/draftMessage.txt"' >> ~/.bashrc
+echo 'alias copyMessage="cat ~/.scripts/helpers/draftMessage.txt | xclip"' >> ~/.bashrc
 #open
 echo "installing open"
 echo 'alias open=". ~/.scripts/open/open.sh"' >> ~/.bashrc
