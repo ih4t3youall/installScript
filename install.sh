@@ -34,12 +34,12 @@ echo "creating temp folder"
 mkdir ~/temp
 cd ~/temp
 echo "clone open...."
-git clone https://github.com/ih4t3youall/open
+git clone git@github.com:ih4t3youall/open.git
 echo "creating scripts folder"
 cp -r open ~/.scripts
 #install and configure vim
 echo "clone vimconfig"
-git clone https://github.com/ih4t3youall/vimconfig
+git clone git@github.com:ih4t3youall/vimconfig.git
 cd vimconfig
 echo "installing vim config"
 rm ~/.vimrc
@@ -64,7 +64,7 @@ mkdir ~/Documents/workspace
 cd
 mkdir ~/.scripts/javaApps
 cd ~/Documents/workspace
-git clone https://github.com/ih4t3youall/scripter
+git clone git@github.com:ih4t3youall/scripter.git
 cd scripter
 mvn clean install
 cd target
@@ -75,10 +75,10 @@ cd
 #install bundles
 echo "installing bundles"
 cd ~/.vim/bundle
-git clone https://github.com/preservim/nerdtree.git
-git clone https://github.com/leafgarland/typescript-vim.git
+git clone git@github.com:preservim/nerdtree.git
+git clone git@github.com:leafgarland/typescript-vim.git
 git clone git://github.com/burnettk/vim-angular.git 
-git clone https://github.com/artur-shaik/vim-javacomplete2.git 
+git clone git@github.com:artur-shaik/vim-javacomplete2.git
 cd
 
 #aliases
