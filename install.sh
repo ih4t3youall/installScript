@@ -122,7 +122,16 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 echo "create scripts folder"
 mkdir -p ~/.scripts
 echo "creating notes"
-cp notes ~/.scripts/notes
+# Works whether the script is run from inside the repo (notes present locally)
+# or downloaded standalone (notes fetched from the repo, empty file as fallback).
+if [ -f notes ]; then
+	cp notes ~/.scripts/notes
+elif curl -fsSL https://raw.githubusercontent.com/ih4t3youall/installScript/master/notes -o ~/.scripts/notes; then
+	echo "notes downloaded from repo"
+else
+	echo "notes not found, creating empty one"
+	touch ~/.scripts/notes
+fi
 echo "creating work"
 touch ~/.scripts/work
 echo "creating helpers folder"
