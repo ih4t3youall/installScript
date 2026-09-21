@@ -243,23 +243,9 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # ---- fin extra config ----
 ALIASES
 
-# ----------------------------------------------------------------------------
-#  Driver Arduino CH340/CH341 (CH34xVCPDriver) - solo macOS
-#  Viene incluido en el repo (CH34xVCPDriver.app). Se copia a /Applications
-#  y se abre para instalar la System Extension. La ACTIVACION final requiere
-#  aprobar en Ajustes del Sistema > Privacidad y Seguridad (no se puede
-#  automatizar por seguridad de macOS/SIP).
-# ----------------------------------------------------------------------------
-echo "installing Arduino CH34x driver"
-if [ -d "$SCRIPT_DIR/CH34xVCPDriver.app" ]; then
-  rm -rf "/Applications/CH34xVCPDriver.app"
-  cp -R "$SCRIPT_DIR/CH34xVCPDriver.app" "/Applications/CH34xVCPDriver.app"
-  open "/Applications/CH34xVCPDriver.app"
-  echo ">> En la ventana del driver: apreta Install/Enable, y luego"
-  echo ">> permiti la extension en Ajustes del Sistema > Privacidad y Seguridad."
-else
-  echo ">> No se encontro CH34xVCPDriver.app en el repo, salteando."
-fi
+# NOTA: el driver de Arduino (CH34xVCPDriver.app) esta incluido en el repo,
+# pero su instalacion se hace A MANO (abrir la app > Install > aprobar en
+# Ajustes del Sistema > Privacidad y Seguridad).
 
 echo "removing temp folder"
 . ~/.zshrc
